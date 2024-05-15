@@ -1,0 +1,1 @@
+# obsidian_to_jekyll
