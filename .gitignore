@@ -1,0 +1,8 @@
+/node_modules
+
+# for test
+/dest
+/images
+
+# .env
+.env.local

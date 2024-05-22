@@ -1,0 +1,27 @@
+{
+  "name": "obsidian_to_jekyll",
+  "version": "1.0.0",
+  "description": "",
+  "bin": {
+    "obsidian_to_jekyll": "index.js"
+  },
+  "main": "index.js",
+  "scripts": {
+    "test": "jest",
+    "start": "node index.js"
+  },
+  "files": [
+    "index.js"
+  ],
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "fs-extra": "^11.2.0"
+  },
+  "devDependencies": {
+    "@types/jest": "^27.0.2",
+    "jest": "^27.5.1"
+  }
+}
