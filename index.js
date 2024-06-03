@@ -2,8 +2,15 @@
 
 const fs = require('fs-extra');
 const path = require('path');
-require('dotenv').config({ path: '.env.local' });
-require('dotenv').config();
+const dotenv = require('dotenv');
+
+const scriptDir = __dirname;
+
+const envPath = path.join(scriptDir, '.env.local');
+
+dotenv.config({ path: envPath });
+
+dotenv.config();
 
 const jekyllMarkdownDir = process.env.JEKYLL_MARKDOWN_DIR || './jekyll/_posts';
 const jekyllImageDir = process.env.JEKYLL_IMAGE_DIR || './jekyll/assets/images';
@@ -77,6 +84,7 @@ async function main(markdownFilePath) {
   }
 }
   
-const markdownFilePath = process.argv[2];
+const inputPath = process.argv[2];
+const markdownFilePath = path.isAbsolute(inputPath) ? inputPath : path.resolve(inputPath);
+
 main(markdownFilePath);
-  
